@@ -21,7 +21,10 @@ app.use(express.static('public'))
 // db.once('open', () => console.log('Connected to mongoose...'))
 
 connect(process.env.MONGO_URI)
-app.use('/', indexRouter)
+// app.use('/', indexRouter)
+app.get('/', (req, res) => {
+    res.json("Homepage")
+})
 
 const port = process.env.PORT || 3000
 app.listen(port, console.log(`Server running at port ${port}...`))
