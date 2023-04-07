@@ -4,7 +4,7 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
 const indexRouter = require('./routes/index')
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 const connect = require('./db/db')
 
 const app = express()
