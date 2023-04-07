@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV !== 'production') {
-require('dotenv').config()
+    require('dotenv').config()
 }
 const express = require('express')
 const expressLayouts = require('express-ejs-layouts')
@@ -24,4 +24,4 @@ connect(process.env.MONGO_URI)
 app.use('/', indexRouter)
 
 const port = process.env.PORT || 3000
-app.listen(port, console.log('Server running at port 3000...'))
+app.listen(port, console.log(`Server running at port ${port}...`))
